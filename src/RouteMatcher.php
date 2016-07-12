@@ -14,7 +14,7 @@ class RouteMatcher
      * @return Route
      * @throws NotFoundException
      */
-    public function findRoute(Request $request, $routes)
+    public function findRoute(Request $request, array $routes)
     {
         /** @var Route $route */
         foreach ($routes as $route) {

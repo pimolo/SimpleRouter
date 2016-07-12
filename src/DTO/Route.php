@@ -15,16 +15,16 @@ class Route
     private $allowedMethods;
 
     /**
-     * @var mixed
+     * @var callable
      */
     private $resource;
 
     /**
      * @param string $uriPath
      * @param array $allowedMethods
-     * @param mixed $resource
+     * @param callable $resource
      */
-    public function __construct($uriPath, array $allowedMethods, $resource = null)
+    public function __construct($uriPath, array $allowedMethods, callable $resource)
     {
         $this->uriPath = $uriPath;
         $this->allowedMethods = $allowedMethods;
@@ -41,11 +41,14 @@ class Route
     }
 
     /**
-     * @param string $uriPath
+     * @param $uriPath
+     * @return $this
      */
     public function setUriPath($uriPath)
     {
         $this->uriPath = $uriPath;
+
+        return $this;
     }
 
     /**
@@ -58,14 +61,17 @@ class Route
 
     /**
      * @param array $allowedMethods
+     * @return $this
      */
     public function setAllowedMethods(array $allowedMethods)
     {
         $this->allowedMethods = $allowedMethods;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return callable
      */
     public function getResource()
     {
@@ -73,10 +79,13 @@ class Route
     }
 
     /**
-     * @param mixed $resource
+     * @param callable $resource
+     * @return $this
      */
-    public function setResource($resource)
+    public function setResource(callable $resource)
     {
         $this->resource = $resource;
+
+        return $this;
     }
 }

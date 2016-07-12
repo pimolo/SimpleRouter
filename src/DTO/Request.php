@@ -45,7 +45,7 @@ class Request
      * @param string $uri
      * @param string $method
      */
-    public function __construct($uri = null, $method = null)
+    public function __construct($method, $uri)
     {
         $this->uri = $uri;
         $this->method = $method;

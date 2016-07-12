@@ -15,7 +15,7 @@ class RequestFactorySpec extends ObjectBehavior
 
     function it_should_transform_httpfoundation_requests_to_custom_request_objects(HttpFoundationRequest $request)
     {
-        $request->getUri()->willReturn(Argument::type('string'));
+        $request->getPathInfo()->willReturn(Argument::type('string'));
         $request->getMethod()->willReturn(Argument::type('string'));
 
         $this::create($request)->shouldReturnAnInstanceOf('Pimolo\SimpleRouter\DTO\Request');;

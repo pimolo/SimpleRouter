@@ -10,8 +10,8 @@ class RequestFactory
     public static function create(HttpFoundationRequest $request)
     {
         return (new Request(
-            $request->getUri(),
-            $request->getMethod()
+            $request->getMethod(),
+            $request->getPathInfo()
         ));
     }
 }
