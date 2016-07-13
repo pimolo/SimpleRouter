@@ -11,6 +11,7 @@ $ composer require pimolo/simple-router
 ```php
 <?php
 
+use Pimolo\SimpleRouter\Router;
 use Pimolo\SimpleRouter\DTO\Route;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -41,6 +42,6 @@ echo $kernel->route($request, [$home, $login]);
 And if you want to test it :
 
 ```sh
-php -S localhost:8000 main.php
+$ php -S localhost:8000 main.php
 ```
 
