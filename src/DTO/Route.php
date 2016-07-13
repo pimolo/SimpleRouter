@@ -31,24 +31,12 @@ class Route
         $this->resource = $resource;
     }
 
-
     /**
      * @return string
      */
     public function getUriPath()
     {
         return $this->uriPath;
-    }
-
-    /**
-     * @param $uriPath
-     * @return $this
-     */
-    public function setUriPath($uriPath)
-    {
-        $this->uriPath = $uriPath;
-
-        return $this;
     }
 
     /**
@@ -60,32 +48,10 @@ class Route
     }
 
     /**
-     * @param array $allowedMethods
-     * @return $this
-     */
-    public function setAllowedMethods(array $allowedMethods)
-    {
-        $this->allowedMethods = $allowedMethods;
-
-        return $this;
-    }
-
-    /**
      * @return callable
      */
     public function getResource()
     {
         return $this->resource;
-    }
-
-    /**
-     * @param callable $resource
-     * @return $this
-     */
-    public function setResource(callable $resource)
-    {
-        $this->resource = $resource;
-
-        return $this;
     }
 }

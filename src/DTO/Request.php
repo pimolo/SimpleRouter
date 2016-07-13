@@ -2,12 +2,27 @@
 
 namespace Pimolo\SimpleRouter\DTO;
 
-
 class Request
 {
+    /**
+     * @var string
+     */
     private $uri;
 
+    /**
+     * @var string
+     */
     private $method;
+
+    /**
+     * @param string $uri
+     * @param string $method
+     */
+    public function __construct($method, $uri)
+    {
+        $this->uri = $uri;
+        $this->method = $method;
+    }
 
     /**
      * @return string
@@ -18,36 +33,10 @@ class Request
     }
 
     /**
-     * @param string $uri
-     */
-    public function setUri($uri)
-    {
-        $this->uri = $uri;
-    }
-
-    /**
      * @return string
      */
     public function getMethod()
     {
         return $this->method;
-    }
-
-    /**
-     * @param string $method
-     */
-    public function setMethod($method)
-    {
-        $this->method = $method;
-    }
-
-    /**
-     * @param string $uri
-     * @param string $method
-     */
-    public function __construct($method, $uri)
-    {
-        $this->uri = $uri;
-        $this->method = $method;
     }
 }
