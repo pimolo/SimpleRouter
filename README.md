@@ -38,3 +38,9 @@ echo $kernel->route($request, [$home, $login]);
 
 ```
 
+And if you want to test it :
+
+```sh
+php -S localhost:8000 main.php
+```
+
