@@ -18,6 +18,6 @@ class RequestFactorySpec extends ObjectBehavior
         $request->getPathInfo()->willReturn(Argument::type('string'));
         $request->getMethod()->willReturn(Argument::type('string'));
 
-        $this::create($request)->shouldReturnAnInstanceOf('Pimolo\SimpleRouter\DTO\Request');;
+        $this::createFromHttpFoundation($request)->shouldReturnAnInstanceOf('Pimolo\SimpleRouter\DTO\Request');;
     }
 }
